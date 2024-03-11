@@ -7,9 +7,17 @@
 </head>
 <body>
     <style>
-        body{
-            background-color: aqua;
+        body { 
+            font-size: 250%;
+            color: rgb(32, 0, 107);
+            background-color: rgb(234, 241, 241);
         }
+        input {
+            color: red;
+            border-color: black;
+           
+        }
+        
     </style>
     <h1>Sistema de Multas</h1>
     Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h   
@@ -17,6 +25,7 @@
     <div id="res">
 
     </div>
+    
     <script>
         function calcular(){
             var txtv = window.document.querySelector('input#txtvel')
@@ -25,6 +34,7 @@
             res.innerHTML = `Sua velocidade atual é de <strong>${vel}km/h</strong><p>`
             if ( vel > 60){
                 res.innerHTML += '<p> Você está <strong>MULTADO</strong> pro excesso de velocidade<p>'
+            
             }
             res.innerHTML += '<p>Dirija sempre com segurança!<p>'
         }
